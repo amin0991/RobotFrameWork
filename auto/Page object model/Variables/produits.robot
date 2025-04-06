@@ -1,0 +1,2 @@
+*** Variables ***
+${cliquersurproduct}   //*[@href="/products"]

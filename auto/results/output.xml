@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-04-06T13:47:40.909953" rpa="false" schemaversion="5">
+<suite id="s1" name="Auto" source="C:\Users\mlaouina\Desktop\auto">
+<suite id="s1-s1" name="Tests" source="C:\Users\mlaouina\Desktop\auto\Tests">
+<suite id="s1-s1-s1" name="Product" source="C:\Users\mlaouina\Desktop\auto\Tests\product.robot">
+<test id="s1-s1-s1-t1" name="Accèder au produit" line="8">
+<kw name="se connecter" owner="connexion">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-04-06T13:47:41.344320" level="INFO">Opening browser 'Edge' to base url 'https://automationexercise.com/'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-04-06T13:47:41.343497" elapsed="10.262618"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${Login}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-04-06T13:47:51.607102" elapsed="0.084482"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-06T13:47:51.693758" level="INFO">Clicking element '//*[@href="/login"]'.</msg>
+<arg>${Login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-06T13:47:51.692346" elapsed="0.691043"/>
+</kw>
+<status status="PASS" start="2025-04-06T13:47:41.341563" elapsed="11.042366"/>
+</kw>
+<kw name="saisir login et MDP" owner="connexion">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${inputlogin}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-06T13:47:52.386440" elapsed="0.046211"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-06T13:47:52.434657" level="INFO">Typing text 'm.amine.laouina@gmail.com' into text field '//input[@type="email"]'.</msg>
+<arg>${inputlogin}</arg>
+<arg>m.amine.laouina@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-06T13:47:52.433621" elapsed="0.279814"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-06T13:47:52.715106" level="INFO">Typing text '123456' into text field '//input[@type="password"]'.</msg>
+<arg>${inputpassword}</arg>
+<arg>123456</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-06T13:47:52.714750" elapsed="0.100711"/>
+</kw>
+<arg>Input Text</arg>
+<arg>${inputpassword}</arg>
+<arg>123456</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="PASS" start="2025-04-06T13:47:52.714195" elapsed="0.101574"/>
+</kw>
+<status status="PASS" start="2025-04-06T13:47:52.385107" elapsed="0.430781"/>
+</kw>
+<kw name="Cliquer sur se connecter" owner="connexion">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-04-06T13:47:52.817603" level="INFO">Clicking button '//*[@type="submit" and @data-qa="login-button"]'.</msg>
+<arg>${cliquersurseconnecter}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-06T13:47:52.817064" elapsed="2.836127"/>
+</kw>
+<status status="PASS" start="2025-04-06T13:47:52.816434" elapsed="2.837267"/>
+</kw>
+<kw name="Cliquer sur product" owner="Produit">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-06T13:47:55.655844" level="INFO">Clicking element '//*[@href="/products"]'.</msg>
+<arg>${cliquersurproduct}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-06T13:47:55.655332" elapsed="3.595777"/>
+</kw>
+<status status="PASS" start="2025-04-06T13:47:55.654578" elapsed="3.596886"/>
+</kw>
+<status status="PASS" start="2025-04-06T13:47:41.339471" elapsed="17.912713"/>
+</test>
+<status status="PASS" start="2025-04-06T13:47:40.953929" elapsed="18.300541"/>
+</suite>
+<status status="PASS" start="2025-04-06T13:47:40.948759" elapsed="18.310135"/>
+</suite>
+<status status="PASS" start="2025-04-06T13:47:40.919329" elapsed="18.343078"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Auto" id="s1" pass="1" fail="0" skip="0">Auto</stat>
+<stat name="Tests" id="s1-s1" pass="1" fail="0" skip="0">Auto.Tests</stat>
+<stat name="Product" id="s1-s1-s1" pass="1" fail="0" skip="0">Auto.Tests.Product</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
